@@ -6,7 +6,6 @@ export class Helper{
   public latitude:string;
   public longitude:string;
   public address:string;
-
   constructor(public name : string, public phone: number) {
   }
 }

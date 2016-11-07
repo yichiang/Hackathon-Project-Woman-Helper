@@ -6,6 +6,5 @@ export class Helpee {
   public HomeAddress:string;
   public WorkAddress:string;
   constructor(public name : string, public phone: number) {
-
   }
 }

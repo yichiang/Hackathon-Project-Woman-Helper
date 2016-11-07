@@ -7,5 +7,4 @@ export class EventDetail {
   public Destination:string;
   public isMonitoring:boolean=true;
   public LocationsId:string;
-
 }

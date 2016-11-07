@@ -5,6 +5,5 @@ export class LocationDetail {
   public HelperId : string;
   public EventDetailsId:string;
   constructor(public latitude : string, public longitude: string) {
-
   }
 }

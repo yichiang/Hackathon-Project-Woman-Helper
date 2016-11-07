@@ -19,7 +19,6 @@ import { Auth } from './auth.service';
       <th>location latitude </th>
       <th>location longitude</th>
       <th>Address </th>
-
       </tr>
         <tr *ngFor="let user of helpers">
         <td>{{user.name}}</td>
@@ -31,13 +30,11 @@ import { Auth } from './auth.service';
     </table>
   </div>
 </div>
-
   `
 })
 export class HelperComponent {
   helpers: any;
   helper: any;
-
   errorMessage:string;
   constructor(private auth: Auth, private  myappService:appDataService, public router: Router) {
   }
