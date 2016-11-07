@@ -22,28 +22,25 @@ import { LocationDetail } from './LocationDetail.model';
     </div>
     <div class="userSection1" *ngIf="userSection[1]">
       <div>
-      <h3> Your Name : {{helpee.name}}</h3>
-      <h3> Your Phone: {{helpee.phone}}</h3>
-
-      <label>current Destination Address</label>
-      <input type="text" #userDestination value='{{helperAddress}}' />
-      <p>Or</p>
-      <p (click)="chooseWorkInput()" >
-      <span class="glyphicon glyphicon-hdd" aria-hidden="true"></span>
-      Work</p>
-      <p (click)="chooseHomeInput()">
-      <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
-Home</p>
+        <h3> Your Name : {{helpee.name}}</h3>
+        <h3> Your Phone: {{helpee.phone}}</h3>
+        <label>current Destination Address</label>
+        <input type="text" #userDestination value='{{helperAddress}}' />
+        <p>Or</p>
+        <p (click)="chooseWorkInput()" >
+        <span class="glyphicon glyphicon-hdd" aria-hidden="true"></span>
+        Work</p>
+        <p (click)="chooseHomeInput()">
+        <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+        Home</p>
       </div>
       <button (click)="HelpeeSectionModeConfirm(userDestination.value)">Confirm</button>
     </div>
     <div class="userSection2" *ngIf="userSection[2]">
-
       <p>Destination: {{eventAccident.Destination}}</p>
       <p>Monitor your Location now</p>
       <p>save new location every mins to database</p>
       <p>{{currentAttid}} , {{currentLong}} <span>{{locationMessage}}</span></p>
-
       <sebm-google-map [latitude]="currentAttid" [longitude]="currentLong">
         <sebm-google-map-marker [latitude]="currentAttid" [longitude]="currentLong"></sebm-google-map-marker>
       </sebm-google-map>
@@ -68,10 +65,10 @@ Home</p>
     <div class="helperSection1" *ngIf="helperSection[1] && isHelperActive">
       <h1>Start monitor</h1>
       <div>
-      <p>Your Name :{{helper.name}} </p>
-      <p>Your Phone :{{helper.phone}} </p>
-      <div *ngIf="eventAccident.id">
-        <p>This event needs your attention</p>
+        <p>Your Name :{{helper.name}} </p>
+        <p>Your Phone :{{helper.phone}} </p>
+        <div *ngIf="eventAccident.id">
+          <p>This event needs your attention</p>
           <p>{{helper.name}}</p>
           <p> {{currentAttid}},{{currentLong}}</p>
           <sebm-google-map [latitude]="currentAttid" [longitude]="currentLong">
@@ -83,25 +80,23 @@ Home</p>
     <div class="helperSection2" *ngIf="helperSection[2] &&isHelperActive">
       <h1>HelperSection2</h1>
       <div>
-      <div class="node1" *ngIf="!isHelpeeInImmidiateDanger">
-        <p>{{helpee.name}} is safe now.</p>
-      </div>
-      <div class="node2" *ngIf="isHelpeeInImmidiateDanger">
-      <div *ngIf="eventAccident.id">
-      <p>{{helpee.name}} is In Danger!! Please Call 911</p>
-
-      <p>{{helpee.name}} destination:</p>
-      <p> {{eventAccident.Destination}} </p>
-          <p> {{currentAttid}},{{currentLong}}</p>
-          <sebm-google-map [latitude]="currentAttid" [longitude]="currentLong">
-            <sebm-google-map-marker [latitude]="currentAttid" [longitude]="currentLong"></sebm-google-map-marker>
-          </sebm-google-map>
-      </div>
-      </div>
+          <div class="node1" *ngIf="!isHelpeeInImmidiateDanger">
+            <p>{{helpee.name}} is safe now.</p>
+          </div>
+        <div class="node2" *ngIf="isHelpeeInImmidiateDanger">
+          <div *ngIf="eventAccident.id">
+            <p>{{helpee.name}} is In Danger!! Please Call 911</p>
+            <p>{{helpee.name}} destination:</p>
+            <p> {{eventAccident.Destination}} </p>
+            <p> {{currentAttid}},{{currentLong}}</p>
+            <sebm-google-map [latitude]="currentAttid" [longitude]="currentLong">
+              <sebm-google-map-marker [latitude]="currentAttid" [longitude]="currentLong"></sebm-google-map-marker>
+            </sebm-google-map>
+          </div>
+        </div>
       </div>
   </div>
 </div>
-
 `
 })
 export class DemoComponent {
@@ -193,7 +188,6 @@ export class DemoComponent {
     this.eventAccident.dateTime=Date.now().toString();
     console.log(userDestinationInput);
     console.log(this.eventAccident);
-
     this.eventAccident.Destination=userDestinationInput;
     this.eventAccident=this.eventAccident;
     this.eventAccident=this.myappService.SaveEvents(this.eventAccident);
@@ -201,8 +195,8 @@ export class DemoComponent {
     console.log(this.eventAccident);
     this.sendLocationsToDb();
   }
-  sendLocationsToDatabaseFunction;
-  location = {longitude:0, latitude:0};
+    sendLocationsToDatabaseFunction;
+    location = {longitude:0, latitude:0};
 
     sendLocationsToDb(){
       // this.sendLocationsToDatabaseFunction=setInterval(this.getMyGeoLocation, 1000);
@@ -260,5 +254,4 @@ export class DemoComponent {
       });
       };
     }
-
 }
