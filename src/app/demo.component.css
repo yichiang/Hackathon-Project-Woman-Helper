@@ -1,0 +1,38 @@
+div.phone-background {
+  width: 33%;
+  height: 600px;
+  background: url('https://republicwireless.com/static/svg/phone-outline.5ff404f3.svg');
+  background-size: contain;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+div.phone-background div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 600px;
+}
+div.phone-background div button{
+  width: 90%;
+  background-color: #BACFD6;
+  font-family: 'Libre Franklin', sans-serif;
+}
+label{
+  text-transform: uppercase;
+  width: 90%;
+  text-align: center;
+}
+.userSection1 div:first-child{
+  height: 40px;
+  margin-bottom: 104px;
+}
+.userSection1 div:first-child input{
+  width: 90%;
+  text-align: center;
+}
+
+.sebm-google-map-container {
+  height: 200px;
+  width:90%;
+  margin: 0 auto;
+}
