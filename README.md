@@ -2,12 +2,13 @@
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.19-3.
 
-The project was created from Nov 5th, 2016 to Nov 7th, 2016 during events. I have added [auth0](https://auth0.com/) and [firebase](https://console.firebase.google.com/) , [angularfire2](https://github.com/angular/angularfire2), and [angular2-google-map](https://github.com/SebastianM/angular2-google-maps)
+The project was created from Nov 5th, 2016 to Nov 7th, 2016 during the event.
+I have added [auth0](https://auth0.com/) and [firebase](https://console.firebase.google.com/) , [angularfire2](https://github.com/angular/angularfire2), and [angular2-google-map](https://github.com/SebastianM/angular2-google-maps)
 ## Author
 Yi Chiang
 ## Live Demo
 I haven't applied https and thus geolocation is not functional in live site and I will fix phone picture's layout soon.
-[Picture](http://ladyproblem.azurewebsites.net/#)
+
 ## Preview Website
 ![Admin View](/img/1.PNG)
 ![Demo Phone View](/img/2.PNG)
@@ -15,6 +16,21 @@ I haven't applied https and thus geolocation is not functional in live site and 
 ![Demo Phone View](/img/4.PNG)
 ![Demo Phone View](/img/5.PNG)
 ![Auth0 View](/img/6.PNG)
+
+## System Requirement
+1. Install angular-cli globally.
+`npm install -g angular-cli`
+
+2.  Replace Firbase Key at `app.module.ts` with your own Key
+
+```
+export const firebaseConfig = {
+  apiKey: "firebaseKey",
+   authDomain: "YourProjectname.firebaseapp.com",
+   databaseURL: "Your firebase LINK",
+   storageBucket: "ProjectName.appspot.com"
+};
+```
 
 ## Development server
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
