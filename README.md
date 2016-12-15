@@ -32,6 +32,7 @@ export const firebaseConfig = {
 };
 ```
 3. Replace it with your Google map Key
+at `app.module.ts`
 ```
 imports:      [
     BrowserModule,
@@ -40,6 +41,16 @@ imports:      [
     AgmCoreModule.forRoot({ apiKey: 'Google Map Key'})
 ],
 ```
+4. Auth0 apikey - `auth.cofig.ts`
+```
+
+export const myConfig: AuthConfiguration = {
+    clientID: 'YourAuth0Key',
+    domain: 'YourAuth0Domain.auth0.com'
+};
+
+```
+
 ## Development server
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
