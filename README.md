@@ -31,7 +31,15 @@ export const firebaseConfig = {
    storageBucket: "ProjectName.appspot.com"
 };
 ```
-
+3. Replace it with your Google map Key
+```
+imports:      [
+    BrowserModule,
+    routing,
+    AngularFireModule.initializeApp(firebaseConfig),
+    AgmCoreModule.forRoot({ apiKey: 'Google Map Key'})
+],
+```
 ## Development server
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
